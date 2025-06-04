@@ -1,0 +1,32 @@
+/* ===== 기본 설정 ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: sans-serif;
+  }
+  
+  /* ===== 랜딩 섹션 ===== */
+  #home {
+    height: 100vh;
+    background-image: url('sources/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* ===== 타이틀 스타일 ===== */
+  .site-title {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    text-align: center;
+  }
