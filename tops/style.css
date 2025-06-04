@@ -1,0 +1,204 @@
+.product-card {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .product-image {
+    width: 240px;
+    height: 260px;
+    object-fit: cover;
+    background-color: #f4f4f4;
+  }
+  
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .product-name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+  
+  .product-description {
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0;
+  }
+  
+  .product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  
+  .product-price {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .add-to-cart {
+    height: 24px;
+    width: 80px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: #584F3f;
+    cursor: pointer;
+
+    border: none;
+    box-shadow: none;
+  }
+  
+  .product-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 60px 20px;
+    width: 100%;
+    justify-items: center;
+  }
+
+  .product-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+  }
+  
+  
+  .product-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5px solid #000000; /* 얇은 구분선 추가 */
+  }
+  
+  .filter-section {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 0 0;
+    gap: 0.5rem;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .filter-label,
+  .filter-toggle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+  }
+  
+  .filter-line {
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+    margin-top: 0.5rem;
+  }
+  
+  .list-of-products-page-content {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 1rem;
+  }
+  
+  #tops-filter {
+    flex: 0 0 250px;
+  }
+  
+
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+#top-navigation {
+    width: 100%;
+    height: 64px;
+    color: black;
+  
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+
+#top-navigation nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+#menu-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    font-family: 'Carnevalee Freakshow', sans-serif;
+}
+  
+#menu-category ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+  
+#menu-icon {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+  
+.icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+
