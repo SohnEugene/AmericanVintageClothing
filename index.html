@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>American Vintage Clothing - Home Page</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/typography.css" />
 </head>
 <body>
 
@@ -34,15 +35,15 @@
     <!--landing page-->
     <section id="home">
         <div id="title-box">
-            <h1 class="title-1">american</h1>
-            <h1 class="title-2">VintagE</h1>
-            <h1 class="title-3">clothing</h1>
+            <h1 class="title-96px">american</h1>
+            <h1 class="title-128px">VintagE</h1>
+            <h1 class="title-64px">clothing</h1>
         </div>
         <button class="button-default">SHOP NOW</button>
     </section>
 
     <!--New Arrival Section-->
-    <section id="new-arrivals">
+    <section id="new-arrivals" class="home-section">
         <header>
             <h2>New Arrivals</h2>
         </header>
@@ -52,7 +53,7 @@
     </section>
 
     <!--Popular Section-->
-    <section id="popular">
+    <section id="popular" class="home-section">
         <header>
             <h2>Popular Items</h2>
         </header>
@@ -62,10 +63,23 @@
     </section>
 
     <!--Footer-->
-    <footer id="footer">
+    <footer id="footer" class="home-section">
         <div class="footer-content">
-        <p>&copy; 2025 American Vintage Clothing. All rights reserved.</p>
-        </div>
+            <div class="footer-column">
+              <p>About Us</p>
+              <p>Our Story</p>
+              <p>Careers</p>
+            </div>
+            <div class="footer-column">
+              <p>Contact</p>
+              <p>Support</p>
+              <p>Privacy Policy</p>
+              <p>Terms of Service</p>
+            </div>
+          </div>
+          <div class="footer-copy">
+            <p>&copy; 2025 American Vintage Clothing. All rights reserved.</p>
+          </div>
     </footer>
 </body>
 </html>

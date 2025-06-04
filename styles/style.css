@@ -1,4 +1,4 @@
-/* ===== 기본 설정 ===== */
+/* style.css */
 * {
   margin: 0;
   padding: 0;
@@ -7,24 +7,8 @@
 
 body, html {
   height: 100%;
-  font-family: sans-serif;
 }
 
-@font-face {
-  font-family: 'Carnevalee Freakshow';
-  src: url('./sources/CarnevaleeFreakshow.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('./sources/Inter-VariableFont_opsz,wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-}
-
-/* landing section */
 #home {
   position: relative;
   height: 100vh;
@@ -136,32 +120,44 @@ a {
   color: inherit;
 }
 
+.home-section {
+  display: flex;
+  flex-direction: column;      /* 위에서 아래로 쌓기 */
+  align-items: center;         /* 가로 중앙 정렬 */             
+  padding: 8rem 4rem;
+  box-sizing: border-box;
+}
 
-h1 {
-  font-family: 'Carnevalee Freakshow', cursive, sans-serif;
-  font-size: 6rem;
+#footer {
+  background-color: #222;
   color: white;
+  padding: 2rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  gap: 3rem; /* 칼럼 간 간격 */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 왼쪽 정렬 */
+  gap: 0.75rem;
+  flex: 1; /* 두 칼럼이 균등한 너비 차지 */
+}
+
+.footer-column p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer-copy {
   text-align: center;
-  font-weight: 100;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #aaa;
 }
-
-.title-1 {
-  font-size: 6rem;
-}
-
-.title-2 {
-  font-size: 8rem;
-}
-
-.title-3 {
-  font-size: 4rem;
-}
-
-.title-32px {
-  font-family: 'Carnevalee Freakshow', cursive, sans-serif;
-  color: white;
-  text-align: center;
-  font-weight: 100;
-  font-size: 32px;
-}
-
