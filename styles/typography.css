@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Carnevalee Freakshow';
+  src: url('styles/sources/CarnevaleeFreakshow.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('styles/sources/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'Carnevalee Freakshow', cursive, sans-serif;
+  font-size: 6rem;
+  color: white;
+  text-align: center;
+  font-weight: 100;
+}
+
+.title-1 {
+  font-size: 6rem;
+}
+
+.title-2 {
+  font-size: 8rem;
+}
+
+.title-3 {
+  font-size: 4rem;
+}
+
+.title-32px {
+  font-family: 'Carnevalee Freakshow', cursive, sans-serif;
+  color: white;
+  text-align: center;
+  font-weight: 100;
+  font-size: 32px;
+}
