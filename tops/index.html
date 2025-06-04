@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tops - American Vintage Clothing</title>
+  <link rel="stylesheet" href="/path/to/font.css" />
+  <link rel="stylesheet" href="/path/to/style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header id="top-navigation">
+    <nav>
+      <a href="/" id="menu-title">American Vintage Clothing</a>
+      <ul id="menu-category">
+        <li><a href="/">Home</a></li>
+        <li><a href="/americanvintageclothing/tops">Tops</a></li>
+        <li><a href="/americanvintageclothing/bottoms">Bottoms</a></li>
+        <li><a href="/americanvintageclothing/accessories">Accessories</a></li>
+      </ul>
+      <!-- 필요시 아이콘 영역 등 추가 -->
+    </nav>
+  </header>
+
+  <main style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
+    <h1 class="title-1">Tops</h1>
+
+    <div class="product-page-content" style="display: flex; gap: 2rem; margin-top: 2rem;">
+      <!-- Filter Section (왼쪽) -->
+      <aside class="filter-section" style="flex: 1; min-width: 200px;">
+        <h2>Filter</h2>
+        <!-- 예: 카테고리, 가격대, 색상 등 필터 항목 -->
+        <div>
+          <h3>Category</h3>
+          <ul>
+            <li><input type="checkbox" id="filter-shirts" name="category" value="shirts" />
+              <label for="filter-shirts">Shirts</label></li>
+            <li><input type="checkbox" id="filter-tshirts" name="category" value="tshirts" />
+              <label for="filter-tshirts">T-Shirts</label></li>
+            <li><input type="checkbox" id="filter-sweaters" name="category" value="sweaters" />
+              <label for="filter-sweaters">Sweaters</label></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Price</h3>
+          <input type="range" min="10" max="200" step="5" />
+          <span>$10 - $200</span>
+        </div>
+        <!-- 추가 필터 영역 -->
+      </aside>
+
+      <!-- Products Grid (오른쪽) -->
+      <section class="product-grid" style="flex: 3; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem;">
+        <!-- 개별 상품 아이템 재사용 가능한 컴포넌트로 구현 예정 -->
+        <!-- 예시 상품 아이템 -->
+        <article class="product-item" style="border: 1px solid #ccc; padding: 1rem;">
+          <img src="/sources/products/shirt1.jpg" alt="Classic Shirt" style="width: 100%; height: auto;" />
+          <h3>Classic Shirt</h3>
+          <p>$49.99</p>
+        </article>
+
+        <article class="product-item" style="border: 1px solid #ccc; padding: 1rem;">
+          <img src="/sources/products/tshirt1.jpg" alt="Vintage T-Shirt" style="width: 100%; height: auto;" />
+          <h3>Vintage T-Shirt</h3>
+          <p>$29.99</p>
+        </article>
+
+        <!-- 더 많은 상품들... -->
+      </section>
+    </div>
+  </main>
+
+  <!-- footer도 필요하면 추가 -->
+
+</body>
+</html>
