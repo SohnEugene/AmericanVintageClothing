@@ -56,6 +56,12 @@ h1 {
   color: black;
 }
 
+.inter-16px-light {
+  font-family: 'Inter';
+  font-weight: 200;
+  font-size: 1rem;
+}
+
 
 .filter-header {
   font-size: 20px;
