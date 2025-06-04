@@ -10,8 +10,9 @@
     font-family: sans-serif;
   }
   
-  /* ===== 랜딩 섹션 ===== */
+  /* landing section */
   #home {
+    position: relative;
     height: 100vh;
     background-image: url('sources/background.jpg');
     background-size: cover;
@@ -19,14 +20,85 @@
     background-repeat: no-repeat;
   
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  
-  /* ===== 타이틀 스타일 ===== */
-  .site-title {
-    font-size: 4rem;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-    text-align: center;
+
+  #title-box h1 {
+    margin: -1.2rem 0; /* 음수 마진으로 위아래 겹침 */
+    line-height: 1;     /* 줄 간격도 줄임 */
   }
+
+  #title-box {
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 또는 space-evenly, space-between */
+    align-items: center;
+  }
+  
+
+  #home button {
+    position: absolute;
+    top: 80%;       /* 부모 높이의 80% 지점에 위치 */
+    left: 50%;      /* 가로 중앙에 위치 */
+    transform: translateX(-50%);  /* 정확히 가운데 정렬 */
+  }
+  
+  /* title style */
+  h1 {
+    font-family: 'Carnivalee Freakshow', cursive, sans-serif;
+    font-size: 6rem;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+  }
+
+  .title-1 {
+    font-size: 6rem;
+  }
+  
+  .title-2 {
+    font-size: 8rem;
+  }
+  
+  .title-3 {
+    font-size: 4rem;
+  }
+
+  @font-face {
+    font-family: 'Carnevalee Freakshow';
+    src: url('styles/sources/CarnevaleeFreakshow.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('styles/sources/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }
+
+
+  .button-default {
+    min-width: 160px;     /* 기본 너비 */
+    height: 48px;         /* 고정 높이 */
+    padding: 0 1rem;    /* 좌우 여백을 주면 텍스트에 따라 자연스럽게 너비 증가 */
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;  /* 텍스트 줄바꿈 방지 */
+  }
+  
+  #button-default:hover {
+    background-color: #f0f0f0;
+  }
+  
