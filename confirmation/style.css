@@ -1,0 +1,36 @@
+.confirmation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation-thanks {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.confirmation-image img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2rem;
+}
+
+.confirmation-description {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.confirmation-buttons {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-default {
+    width: 400px;
+}

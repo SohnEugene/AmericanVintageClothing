@@ -4,7 +4,7 @@ const cartItemsContainer = document.getElementById('cart-items');
 const cartItems = [
   {
     image: '../assets/images/tops1.png',
-    name: "Levi’s Vintage BIG E Western Shirt Levi’s Vintage BIG E Western Shirt Levi’s Vintage BIG E Western Shirt Levi’s Vintage BIG E Western Shirt Levi’s Vintage BIG E Western Shirt ",
+    name: "Levi’s Vintage BIG E Western Shirt",
     description: "Size: L · Cotton/Poly",
     price: "$89"
   },
