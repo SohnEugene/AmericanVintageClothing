@@ -1,0 +1,169 @@
+/* container layout */
+
+.checkout-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin: 0 8rem;
+}
+   
+.checkout-form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* left field */
+
+.checkout-section {
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    font-size: 1rem;
+}
+  
+.checkout-section-title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.checkout-section-content {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Divider */
+.section-divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+/* Input fields common style */
+input[type="email"],
+input[type="tel"],
+input[type="text"] {
+    padding: 0 1rem;
+    height: 40px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline-offset: 2px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus {
+    border-color: #000;
+}
+
+.row-1-1,
+.row-1-2,
+.row-1-3 {
+    display: flex;
+    gap: 1rem;
+}
+
+.row-1-2 input,
+.row-1-3 input {
+    flex: 1;
+}
+
+.row-1-1 input {
+    flex: 1;
+}
+
+
+.two-options {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+  
+.two-options label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding-left: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: transparent;
+    color: black;
+}
+  
+.two-options input[type="radio"] {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+  
+.two-options label:has(input[type="radio"]:checked) {
+    background-color: #ddd;
+}
+
+
+.checkout-pay-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.btn-default {
+    width: 400px;
+}
+  
+
+
+/* right field */
+
+.order-summary {
+    flex: 2;
+    overflow-y: auto;
+    border-top: 1px solid #bbb;
+    padding: 1rem 0;
+}
+  
+.order-items-wrapper {
+    margin-bottom: 1.5rem;
+    /* add later */
+}
+  
+.order-total {
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: right;
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 20px;
+    margin-bottom: 8px;
+    gap: 8px; 
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+  
+.summary-label,
+.summary-value {
+    text-align: right;
+}
+  
