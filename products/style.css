@@ -1,96 +1,88 @@
-.product-detail-container {
-    padding: 4rem 2rem;
-    font-family: 'Inter';
-    color: black;
-    width: 100%;
+#product-detail-container {
     box-sizing: border-box;
 }
 
-.product-detail-content {
+
+
+#product-detail-content {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
     margin: 2rem 0;
 }
-  
-.product-images {
+
+#product-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    flex: 3;
+    flex: 2;
     min-width: 320px;
 }
-
-
   
-.product-images img {
+#product-images img {
     width: 100%;
     object-fit: cover;
     aspect-ratio: 4/5;
 }
 
 
-.product-info {
-    flex: 2;
+
+#product-info {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    gap: 3rem;
+}
+
+#product-info-name-price {
+    display: flex;
+    justify-content: space-between;
     gap: 4rem;
+    font-weight: bold;
+	font-size: 24px;
+}
+  
+#product-info-name {
+    flex: 1;
+    word-break: break-word;
+}
+  
+#product-info-price {
+    flex-shrink: 0; /* 줄어들지 않게 고정 */
 }
 
 
+#product-info-description {
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
 
-  .product-name-price {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 4rem;
-    font-size: 24px;
+#product-info-description-features {
     font-weight: bold;
-  }
+}
   
-  .product-name {
-    flex: 1;
-    margin: 0;
-    word-break: break-word;
-  }
   
-  .product-price {
-    font-size: 32px;
-    flex-shrink: 0; /* 줄어들지 않게 고정 */
-    margin: 0;
-  }
-
-  .product-description-features {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  
-  .product-description-size {
-    font-size: 16px;
-    font-weight: 300;
-    margin-bottom: 1rem;
-  }
-  
-  .product-description-measurements {
+#product-info-description-measurements {
     font-size: 12px;
     font-weight: 300;
-    margin-bottom: 1rem;
+    margin-top: -1rem;
+	margin-left: 1rem;
     line-height: 1.5;
-  }
+}
   
-  .product-description-notes {
-    font-size: 12px;
+#product-info-description-notes {
     color: #aa0000;
     font-style: italic;
-  }
+}
 
 
-  .related-products {
+.related-products {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
     margin-top: 4rem;
-  }
-  
+}

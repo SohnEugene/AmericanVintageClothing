@@ -1,71 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>tops 1 - American Vintage Clothing</title>
-  <link rel="stylesheet" href="../styles/typography.css" />
-  <link rel="stylesheet" href="../styles/default.css" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>tops 1 - American Vintage Clothing</title>
+    <link rel="stylesheet" href="../styles/typography.css" />
+    <link rel="stylesheet" href="../styles/default.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <div id="header-placeholder"></div>
-  <div id="search-bar-placeholder"></div>
-  <div id="cart-popup-placeholder"></div>
+    <div id="header-placeholder"></div>
+    <div id="search-bar-placeholder"></div>
+    <div id="cart-popup-placeholder"></div>
 
-  <main class="product-detail-container">
-    <a href="../tops/index.html" class="inter-16px-light">&lt; Back</a>
+    <main id="product-detail-container">
+        <a href="../tops/index.html" class="inter-16px-light">&lt; Back</a>
 
-    <div class="product-detail-content">
-      <div class="product-images">
-        <img src="../assets/images/tops2.png" alt="Product Image 1" />
-        <img src="../assets/images/tops2-2.png" alt="Product Image 2" />
-        <img src="../assets/images/tops2-3.png" alt="Product Image 3" />
-      </div>
+        <div id="product-detail-content">
+            <!-- Image Section -->
+            <div id="product-images">
+                <img src="../assets/images/tops2.png" alt="Product Image 1" />
+                <img src="../assets/images/tops2-2.png" alt="Product Image 2" />
+                <img src="../assets/images/tops2-3.png" alt="Product Image 3" />
+            </div>
 
-      <!-- 우측 정보 섹션 -->
-      <div class="product-info">
-        <div class="product-name-price">
-            <p class="product-name">LEVI’S Vintage©️1978 BIG E Mens Western Shirt Blue Check with Pearl Snaps by Levi’s Sportswear®️</p>
-            <p class="product-price">$79</p>
+            <!-- Information Section  -->
+            <div id="product-info">
+                <div id="product-info-name-price">
+                    <p id="product-info-name">LEVI’S Vintage©️1978 BIG E Mens Western Shirt Blue Check with Pearl Snaps by Levi’s Sportswear®️</p>
+                    <p id="product-info-price">$79</p>
+                </div>
+                <div id="product-info-description">
+                    <p id="product-info-description-features">
+                    Features iconic Big E “ LEVI’S “ tab front. Pearl snap closures front, cuffs & pockets. Double front Western pocket design with Western style front & back yokes.
+                    </p>
+                
+                    <p id="product-info-description-size">
+                    Size: Large<br>
+                    Fabric content: Cotton/Poly
+                    </p>
+
+                    <p>Measurements - taken with item laid flat.</p>
+                
+                    <p id="product-info-description-measurements">
+                    Length: (from under armpit seam to bottom of side hem): 49cm<br>
+                    Width: (across chest, connecting armpit seams): 54cm<br>
+                    Top Shoulder: (arm seam to neck seam): 15cm<br>
+                    Sleeve Length: (from underarm seam to cuff bottom hem): 54cm
+                    </p>
+                
+                    <p id="product-info-description-notes">
+                    Item Condition: No Holes No Stains.<br>
+                    Please choose carefully - No Returns On This Item.<br>
+                    Please email before purchasing should you require more information.
+                    </p>
+                </div>
+                
+                <button
+                    class="btn-default"
+                    data-name="LEVI’S Vintage Mens Western Shirt"
+                    data-image="../assets/images/tops2.png"
+                    data-price="$79"
+                >
+                Add to Cart
+                </button>
+            </div>
+
         </div>
-        <div class="product-description">
-            <p class="product-description-features">
-              Features iconic Big E “ LEVI’S “ tab front. Pearl snap closures front, cuffs & pockets. Double front Western pocket design with Western style front & back yokes.
-            </p>
-          
-            <p class="product-description-size">
-              Size: Large<br>
-              Fabric content: Cotton/Poly
-            </p>
-          
-            <p class="product-description-measurements">
-              Measurements - taken with item laid flat.<br>
-              Length: (from under armpit seam to bottom of side hem): 49cm<br>
-              Width: (across chest, connecting armpit seams): 54cm<br>
-              Top Shoulder: (arm seam to neck seam): 15cm<br>
-              Sleeve Length: (from underarm seam to cuff bottom hem): 54cm
-            </p>
-          
-            <p class="product-description-notes">
-              Item Condition: No Holes No Stains.<br>
-              Please choose carefully - No Returns On This Item.<br>
-              Please email before purchasing should you require more information.
-            </p>
-          </div>
-          
-        <button class="btn-default">Add to Cart</button>
-      </div>
-    </div>
 
-    <!-- You may also like 섹션 -->
-    <section class="related-products">
-      <h2>You may also like</h2>
-    </section>
-  </main>
+        <!-- You may also like section -->
+        <section class="related-products">
+            <h2>You may also like</h2>
+        </section>
+    </main>
 
-  <div id="footer-placeholder"></div>
-  <script src="../scripts/include.js"></script>
+    <div id="footer-placeholder"></div>
+
+    <script src="../scripts/include.js"></script>
+    <script src="../scripts/added-to-cart-popup.js"></script>
+
 </body>
 </html>
