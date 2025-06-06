@@ -2,20 +2,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 2rem;
 }
 
 .confirmation-thanks {
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 .confirmation-image img {
     width: 200px;
     height: 200px;
-    margin-bottom: 2rem;
 }
 
 .confirmation-description {
@@ -29,8 +27,4 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.btn-default {
-    width: 400px;
 }
