@@ -371,20 +371,16 @@ main {
     flex-direction: column;
     justify-content: space-between;
     flex: 1 1 auto;
-    min-width: 0;
 }
 
 .cart-item-title {
     font-weight: bold;
     font-size: 12px;
-    margin: 0;
 }
   
 .cart-item-description {
     font-size: 8px;
-    line-height: 1.4;
     word-break: break-word;
-    margin: 0;
 }
 
 .cart-item-right {

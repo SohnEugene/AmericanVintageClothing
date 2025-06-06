@@ -1,52 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cart</title>
-  <link rel="stylesheet" href="../styles/typography.css" />
-  <link rel="stylesheet" href="../styles/default.css" />
-  <link rel="stylesheet" href="./style.css" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Cart</title>
+	<link rel="stylesheet" href="../styles/typography.css" />
+	<link rel="stylesheet" href="../styles/default.css" />
+	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header -->
-  <div id="header-placeholder"></div>
+	<div id="header-placeholder"></div>
 
-  <main class="cart-page">
-    <h1 class="title-category">CART</h1>
+	<main id="cart-page">
+		<h1 class="title-category">CART</h1>
 
-    <section class="cart-box">
-      <!-- Top border -->
-      <div class="cart-box-top-border"></div>
+		<section id="cart-box">
 
-      <!-- Cart item list -->
-      <div class="cart-items-wrapper">
-        <div id="cart-items"></div>
-      </div>
+			<div id="cart-items-wrapper">
+				<div id="cart-items"></div>
+			</div>
+			<div class="cart-box-divider"></div>
+			<span id="cart-total">TOTAL: $0.00</span>
 
-      <!-- Divider between items and total -->
-      <div class="cart-box-divider"></div>
+		</section>
 
-      <!-- Total section -->
-      <div class="cart-total">
-        <span id="cart-total-amount">TOTAL: $0.00</span>
-      </div>
+		<div id="cart-actions">
+			<button class="btn-default btn-width-400">CHECK OUT</button>
+			<button class="btn-default btn-width-400">KEEP SHOPPING</button>
+		</div>
+	</main>
 
-      <!-- Bottom border -->
-      <div class="cart-box-bottom-border"></div>
-    </section>
+	<!-- Optional footer -->
+	<div id="footer-placeholder"></div>
 
-    <div class="cart-actions">
-        <button class="btn-default btn-width-400">CHECK OUT</button>
-        <button class="btn-default btn-width-400">KEEP SHOPPING</button>
-      </div>
-  </main>
-
-  <!-- Optional footer -->
-  <div id="footer-placeholder"></div>
-
-  <script src="../scripts/include.js"></script>
-  <script src="../scripts/load-cart-items.js"></script>
+	<script src="../scripts/include.js"></script>
+	<script src="../scripts/load-cart-items.js"></script>
 </body>
 </html>
