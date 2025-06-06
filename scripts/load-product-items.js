@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
   function renderProducts() {
-    const products = [
+    let products = [
       {
         image: "../assets/images/tops1.png",
         name: "Oversized Shirt",
@@ -86,6 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
         price: "$89"
       }
     ];
+
+    // search 페이지에서만 필터링
+    if (window.location.pathname.includes('search')) {
+      products = products.filter(product =>
+      product.name.toLowerCase().includes('shirt')
+      );
+    }
   
     const productGrid = document.querySelector(".product-grid");
     const template = document.querySelector("#product-card-template");

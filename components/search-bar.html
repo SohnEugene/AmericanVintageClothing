@@ -3,7 +3,9 @@
         <div class="popup-title">Search</div>
     
         <div id="search-input-wrapper">
-            <input type="text" placeholder="Search..." />
+            <form action="/search/index.html" method="GET">
+                <input type="text" placeholder="Search..." name="query" required />
+            </form>
         </div>
     
         <button id="search-close-btn">X</button>
