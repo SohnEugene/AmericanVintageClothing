@@ -192,6 +192,21 @@ main {
     font-weight: bold;
 }
 
+a.btn-default {
+    width: 400px;
+    height: 3rem;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #584F3f;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 /* search bar */
