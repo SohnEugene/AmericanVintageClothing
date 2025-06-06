@@ -40,7 +40,6 @@ main {
     justify-content: center;
     align-items: center;
     padding: 0 2rem;
-    box-sizing: border-box;
 }
 
 #top-navigation nav {
@@ -64,7 +63,6 @@ main {
     margin: 0;
     padding: 0;
     font-size: 20px;
-    font-family: 'Inter', sans-serif;
     font-weight: bold;
 }
   
@@ -77,7 +75,19 @@ main {
 .icon {
     width: 24px;
     height: 24px;
-    object-fit: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#search-icon {
+    background-image: url('../assets/icons/search-dark.png');
+}
+#cart-icon {
+    background-image: url('../assets/icons/cart-dark.png');
+}
+#user-icon {
+    background-image: url('../assets/icons/user-dark.png');
 }
 
 

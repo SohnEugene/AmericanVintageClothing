@@ -1,0 +1,85 @@
+/* navigation */
+
+#top-navigation {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+#search-icon {
+  background-image: url('../assets/icons/search-white.png');
+}
+#cart-icon {
+  background-image: url('../assets/icons/cart-white.png');
+}
+#user-icon {
+  background-image: url('../assets/icons/user-white.png');
+}
+
+
+
+/* landing page */
+
+#landing-page {
+  position: relative;
+  min-height: 100vh;
+  background: url('../assets/images/background.jpg') center / cover no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title-box {
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#title-box h1 {
+  margin: -1.2rem 0;
+  line-height: 1;
+}
+
+#shop-now-btn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 160px; /* 고유 너비 필요 시 유지 */
+  padding: 0 1rem;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+
+  background-color: white;
+  color: #584F3f;
+}
+
+
+
+/* main part*/
+
+.home-section {
+  display: flex;
+  flex-direction: column;      /* 위에서 아래로 쌓기 */
+  align-items: center;         /* 가로 중앙 정렬 */             
+  padding: 8rem 4rem;
+  box-sizing: border-box;
+}
+
+#footer {
+  background-color: #222;
+  color: white;
+  padding: 2rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+}

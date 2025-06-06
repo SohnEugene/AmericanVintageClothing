@@ -1,87 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>American Vintage Clothing - Home Page</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/default.css" />
     <link rel="stylesheet" href="styles/typography.css" />
+    <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
 
-    <!--navigation bar sticked to the upper part of screen-->
-    <header id="top-navigation">
-        <nav>
-            <div id="menu-title">
-                <a href="#home" class="title-32px">american vintage</a>
-            </div>
-            <div id="menu-category">
-                <ul>
-                    <li><a href="#shop">Shop</a></li>
-                    <li><a href="#all-products">All Products</a></li>
-                    <li><a href="#new-arrivals">New Arrival</a></li>
-                    <li><a href="#sale">Sale</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </div>
-            <div id="menu-icon">
-                <img src="styles/sources/search-white.png" alt="Search Icon" class="icon" />
-                <img src="styles/sources/cart-white.png" alt="Cart Icon" class="icon" />
-                <img src="styles/sources/user-white.png" alt="User Icon" class="icon" />
-            </div>
-        </nav>
-    </header>
+    <!-- top navigation -->
+    <div id="header-placeholder"></div>
 
-    <!--landing page-->
-    <section id="home">
+    <!-- landing page -->
+    <section id="landing-page">
         <div id="title-box">
             <h1 class="title-96px">american</h1>
             <h1 class="title-128px">VintagE</h1>
             <h1 class="title-64px">clothing</h1>
         </div>
-        <button id="shop-now-btn" class="button-default">SHOP NOW</button>
+        <button id="shop-now-btn" class="btn-default">SHOP NOW</button>
     </section>
 
-    <!--New Arrival Section-->
-    <section id="new-arrivals" class="home-section">
-        <header>
-            <h2>New Arrivals</h2>
-        </header>
-        <div class="product-grid">
-            <!--product list-->
-        </div>
-    </section>
-
-    <!--Popular Section-->
-    <section id="popular" class="home-section">
-        <header>
-            <h2>Popular Items</h2>
-        </header>
-        <div class="product-grid">
-            <!--lists-->
-        </div>
-    </section>
-
-    <!--Footer-->
-    <footer id="footer" class="home-section">
-        <div class="footer-content">
-            <div class="footer-column">
-              <p>About Us</p>
-              <p>Our Story</p>
-              <p>Careers</p>
+    <!-- main content -->
+    <main class="main-wrapper">
+        <section id="new-arrivals" class="home-section">
+            <header>
+                <h2>New Arrivals</h2>
+            </header>
+            <div class="product-grid">
+                <!-- product list -->
             </div>
-            <div class="footer-column">
-              <p>Contact</p>
-              <p>Support</p>
-              <p>Privacy Policy</p>
-              <p>Terms of Service</p>
+        </section>
+
+        <section id="popular" class="home-section">
+            <header>
+                <h2>Popular Items</h2>
+            </header>
+            <div class="product-grid">
+                <!-- product list -->
             </div>
-          </div>
-          <div class="footer-copy">
-            <p>&copy; 2025 American Vintage Clothing. All rights reserved.</p>
-          </div>
-    </footer>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
 
     <script src="main.js"></script>
+    <script src="scripts/include.js"></script>
+    
 </body>
 </html>
