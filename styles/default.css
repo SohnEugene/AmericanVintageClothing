@@ -186,7 +186,7 @@ main {
 
 
 
-/* search bar */
+/* pop up */
 
 .popup-overlay{
     position: fixed;
@@ -217,6 +217,15 @@ main {
     font-weight: bold;
     text-align: center;
 }
+
+.popup-close-btn {
+    margin: 1rem;
+    margin-left: auto;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
   
 #search-input-wrapper {
     width: 40rem;
@@ -235,15 +244,6 @@ main {
     font-size: 1rem;
     outline: none;
     padding-left: 1.5rem;
-}
-  
-#search-close-btn {
-    margin: 1rem;
-    margin-left: auto;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
 }
 
 
@@ -295,7 +295,7 @@ main {
     font-size: 1rem;
 }
   
-.add-to-cart {
+.add-to-cart-btn {
     height: 24px;
     width: 80px;
     font-size: 12px;
