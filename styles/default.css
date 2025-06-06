@@ -90,46 +90,49 @@ main {
 
 
 
-/* top navigatino dropdown */
+/* Top navigation dropdown */
+
+.dropdown-wrapper {
+  position: relative;
+}
 
 .has-dropdown {
-    position: relative;
+  cursor: pointer;
 }
-  
+
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: calc(100% + 19.5px);
-    left: -8px;
-    z-index: 999;
-    
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: repeat(4, auto);
-    gap: 1.5rem 5rem;
-    padding: 1rem;
-    padding-right: 5rem;
-  
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    pointer-events: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(4, auto);
+  gap: 1.5rem 5rem;
+  padding: 1rem;
+  padding-right: 5rem;
 
-    background-color: #f3f3f3;
+  position: absolute;
+  top: calc(100% + 19.5px);
+  left: -8px;
+  z-index: 999;
 
-    font-size: 1rem;
-    text-decoration: none;
+  background-color: #f3f3f3;
+  font-size: 1rem;
+  text-decoration: none;
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
 }
-  
-.has-dropdown:hover .dropdown-menu {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
+
+.dropdown-wrapper:hover .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
-  
+
 .dropdown-menu a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
+
 
 
 
@@ -281,6 +284,8 @@ a.btn-default {
     flex-direction: column;
     gap: 0.5rem;
     font-family: 'Inter', sans-serif;
+
+    flex: 0 0 auto;
 }
   
 .product-image {
@@ -417,3 +422,21 @@ a.btn-default {
 .cart-item-remove {
     visibility: hidden;
 }
+
+
+
+/* product item line */
+.product-line-placeholder {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    margin: 0;
+    scroll-behavior: smooth;
+  
+    align-self: flex-start; /* 💡 중요: 부모의 center 정렬에서 빠져나오기 */
+    width: 100%; /* 필요 시 최대 너비 확보 */
+  }
+  
+  
