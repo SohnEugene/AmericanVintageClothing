@@ -128,47 +128,40 @@ function setupCartPopupEvents() {
       const image = btn.dataset.image;
       const price = btn.dataset.price;
 
-      const popupHTML = `
-        <div class="popup-overlay" id="added-to-cart-overlay" style="
-          position: fixed;
-          top: 0; left: 0;
-          width: 100%; height: 100%;
-          background: rgba(0, 0, 0, 0.5);
-          display: flex; align-items: center; justify-content: center;
-          z-index: 1000;">
-          <div class="popup-container" style="
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            position: relative;">
-            <button id="added-to-cart-close-btn" style="
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              background: transparent;
-              border: none;
-              font-size: 1.2rem;
-              cursor: pointer;">×</button>
-            <h2>Added to Cart</h2>
-            <img src="${image}" alt="${name}" style="width: 100px; margin: 1rem 0;" />
-            <p><strong>${name}</strong></p>
-            <p>${price}</p>
-          </div>
-        </div>
-      `;
+      fetch('../components/added-to-cart.html')
+        .then(response => {
+          if (!response.ok) throw new Error('Failed to load added-to-cart.html');
+          return response.text();
+        })
+        .then(popupHTML => {
+          const placeholder = document.getElementById('cart-popup-placeholder');
+          if (!placeholder) {
+            console.error('#cart-popup-placeholder not found in the DOM');
+            return;
+          }
 
-      const placeholder = document.getElementById('cart-popup-placeholder');
-      if (placeholder) {
-        placeholder.innerHTML = popupHTML;
+          placeholder.innerHTML = popupHTML;
 
-        const closeBtn = document.getElementById('added-to-cart-close-btn');
-        closeBtn.addEventListener('click', () => {
-          document.getElementById('added-to-cart-overlay')?.remove();
-        });
-      } else {
-        console.error('#cart-popup-placeholder not found in the DOM');
-      }
+          requestAnimationFrame(() => {
+            const overlay = placeholder.querySelector('.popup-overlay');
+            const wrapper = overlay.querySelector('#cart-item-wrapper');
+
+            // product info를 동적으로 삽입
+            wrapper.innerHTML = `
+              <img src="${image}" alt="${name}" class="popup-product-image" style="width: 100px; margin-bottom: 1rem;" />
+              <div class="popup-product-name"><strong>${name}</strong></div>
+              <div class="popup-product-price">${price}</div>
+            `;
+
+            // 닫기 버튼 동작
+            const closeBtn = overlay.querySelector('.popup-close-btn');
+            closeBtn.addEventListener('click', () => {
+              overlay.remove();
+            });
+          });
+        })
+        .catch(error => console.error('Error loading added-to-cart.html:', error));
     });
   });
 }
+

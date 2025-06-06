@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function setupSearchBarEvents() {
     const searchIcon = document.getElementById('search-icon');
     const searchOverlay = document.querySelector('.popup-overlay');
-    const searchCloseBtn = document.getElementById('search-close-btn');
+    const searchCloseBtn = document.querySelector('.popup-close-btn');
 
     console.log('searchIcon:', searchIcon);
     console.log('searchOverlay:', searchOverlay);

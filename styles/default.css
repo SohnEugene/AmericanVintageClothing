@@ -186,7 +186,7 @@ main {
 
 
 
-/* pop up */
+/* search bar */
 
 .popup-overlay{
     position: fixed;
@@ -295,7 +295,7 @@ main {
     font-size: 1rem;
 }
   
-.add-to-cart-btn {
+.add-to-cart {
     height: 24px;
     width: 80px;
     font-size: 12px;
