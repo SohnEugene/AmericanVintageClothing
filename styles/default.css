@@ -95,6 +95,17 @@ main {
 
 .dropdown-wrapper {
   position: relative;
+  display: inline-block;
+}
+.dropdown-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: -10px;
+    width: 800%;
+    height: 250px;
+    pointer-events: auto;
+    background: transparent;
 }
 
 .has-dropdown {
