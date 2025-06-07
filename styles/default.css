@@ -198,7 +198,7 @@ button {
     font-size: 20px;
     font-weight: bold;
     color: white;
-    background-color: #584F3f;
+    background-color: #534740;
     border: none;
     cursor: pointer;
     text-align: center;
@@ -218,13 +218,23 @@ a.btn-default {
     font-size: 20px;
     font-weight: bold;
     color: white;
-    background-color: #584F3f;
+    background-color: #534740;
     border: none;
     cursor: pointer;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.btn-width-400 {
+    width: 400px;
+}
+
+.btn-width-auto {
+    width: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 
@@ -348,7 +358,7 @@ a.btn-default {
     font-size: 12px;
     font-weight: bold;
     color: white;
-    background-color: #584F3f;
+    background-color: #534740;
     cursor: pointer;
 
     border: none;

@@ -13,112 +13,114 @@ document.addEventListener('DOMContentLoaded', () => {
   
   function renderProductsLine() {
     const products = [
-        {
-          image: "../assets/images/tops1.png",
-          name: "Oversized Shirt",
-          description: "Relaxed fit with dropped shoulders",
-          price: "$89"
-        },
-        {
-          image: "../assets/images/tops2.png",
-          name: "Classic Tank",
-          description: "Lightweight cotton jersey",
-          price: "$39"
-        },
-        {
-          image: "../assets/images/tops3.png",
-          name: "Denim Jacket",
-          description: "Vintage wash with distressed details",
-          price: "$129"
-        },
-        {
-          image: "../assets/images/tops4.png",
-          name: "Graphic Tee",
-          description: "Soft cotton with bold print",
-          price: "$49"
-        },
-        {
-          image: "../assets/images/tops5.png",
-          name: "Knitted Sweater",
-          description: "Cozy knit with ribbed cuffs",
-          price: "$79"
-        },
-        {
-          image: "../assets/images/tops6.png",
-          name: "Plaid Flannel Shirt",
-          description: "Soft brushed cotton with button-down front",
-          price: "$69"
-        },
-        {
-          image: "../assets/images/tops7.png",
-          name: "Hooded Sweatshirt",
-          description: "Fleece-lined with kangaroo pocket",
-          price: "$59"
-        },
-        {
-          image: "../assets/images/tops8.png",
-          name: "Belted Blazer",
-          description: "Tailored fit with removable belt",
-          price: "$149"
-        },
-        {
-          image: "../assets/images/tops9.png",
-          name: "Cropped Cardigan",
-          description: "Soft knit with button closure",
-          price: "$69"
-        },
-        {
-          image: "../assets/images/tops10.png",
-          name: "Puffer Vest",
-          description: "Lightweight insulation with zip front",
-          price: "$99"
-        },
-        {
-          image: "../assets/images/tops11.png",
-          name: "Ribbed Turtleneck",
-          description: "Stretchy knit with high neck",
-          price: "$59"
-        },
-        {
-          image: "../assets/images/tops12.png",
-          name: "Linen Button-Up",
-          description: "Breathable fabric with relaxed fit",
-          price: "$89"
-        }
-      ];
+      {
+        image: "../assets/images/tops1.png",
+        name: "Oversized Shirt",
+        description: "Relaxed fit with dropped shoulders",
+        price: "$89"
+      },
+      {
+        image: "../assets/images/tops2.png",
+        name: "Classic Tank",
+        description: "Lightweight cotton jersey",
+        price: "$39"
+      },
+      {
+        image: "../assets/images/tops3.png",
+        name: "Denim Jacket",
+        description: "Vintage wash with distressed details",
+        price: "$129"
+      },
+      {
+        image: "../assets/images/tops4.png",
+        name: "Graphic Tee",
+        description: "Soft cotton with bold print",
+        price: "$49"
+      },
+      {
+        image: "../assets/images/tops5.png",
+        name: "Knitted Sweater",
+        description: "Cozy knit with ribbed cuffs",
+        price: "$79"
+      },
+      {
+        image: "../assets/images/tops6.png",
+        name: "Plaid Flannel Shirt",
+        description: "Soft brushed cotton with button-down front",
+        price: "$69"
+      },
+      {
+        image: "../assets/images/tops7.png",
+        name: "Hooded Sweatshirt",
+        description: "Fleece-lined with kangaroo pocket",
+        price: "$59"
+      },
+      {
+        image: "../assets/images/tops8.png",
+        name: "Belted Blazer",
+        description: "Tailored fit with removable belt",
+        price: "$149"
+      },
+      {
+        image: "../assets/images/tops9.png",
+        name: "Cropped Cardigan",
+        description: "Soft knit with button closure",
+        price: "$69"
+      },
+      {
+        image: "../assets/images/tops10.png",
+        name: "Puffer Vest",
+        description: "Lightweight insulation with zip front",
+        price: "$99"
+      },
+      {
+        image: "../assets/images/tops11.png",
+        name: "Ribbed Turtleneck",
+        description: "Stretchy knit with high neck",
+        price: "$59"
+      },
+      {
+        image: "../assets/images/tops12.png",
+        name: "Linen Button-Up",
+        description: "Breathable fabric with relaxed fit",
+        price: "$89"
+      }
+    ];
   
-    const container = document.querySelector(".product-line-placeholder");
+    const containers = document.querySelectorAll(".product-line-placeholder");
     const template = document.querySelector("#product-card-template");
   
-    if (!container || !template) {
-      console.error('product-line-placeholder or template not found.');
+    if (!containers.length || !template) {
+      console.error('No product-line-placeholder or template found.');
       return;
     }
   
-    products.forEach(product => {
-      const clone = template.content.cloneNode(true);
+    containers.forEach(container => {
+      products.forEach(product => {
+        const clone = template.content.cloneNode(true);
   
-      clone.querySelector(".product-image").src = product.image;
-      clone.querySelector(".product-image").alt = product.name;
-      clone.querySelector(".product-name").textContent = product.name;
-      clone.querySelector(".product-description").textContent = product.description;
-      clone.querySelector(".product-price").textContent = product.price;
+        clone.querySelector(".product-image").src = product.image;
+        clone.querySelector(".product-image").alt = product.name;
+        clone.querySelector(".product-name").textContent = product.name;
+        clone.querySelector(".product-description").textContent = product.description;
+        clone.querySelector(".product-price").textContent = product.price;
   
-      const addBtn = clone.querySelector(".add-to-cart-btn");
-      addBtn.dataset.name = product.name;
-      addBtn.dataset.image = product.image;
-      addBtn.dataset.price = product.price;
+        const addBtn = clone.querySelector(".add-to-cart-btn");
+        addBtn.dataset.name = product.name;
+        addBtn.dataset.image = product.image;
+        addBtn.dataset.price = product.price;
   
-      // scroll snap 적용
-      const wrapper = document.createElement('div');
-      wrapper.style.scrollSnapAlign = "start";
-      wrapper.appendChild(clone);
+        const wrapper = document.createElement('div');
+        wrapper.style.scrollSnapAlign = "start";
+        wrapper.appendChild(clone);
   
-      container.appendChild(wrapper);
+        container.appendChild(wrapper);
+      });
     });
   
-    setupCartPopupEvents();
+    setupCartPopupEvents(); // 여전히 전체 페이지에 대해 이벤트 적용
   }
+  
 
 
 
