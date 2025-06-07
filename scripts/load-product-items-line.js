@@ -119,4 +119,74 @@ document.addEventListener('DOMContentLoaded', () => {
   
     setupCartPopupEvents();
   }
+
+
+
+function setupCartPopupEvents() {
+  document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const name = btn.dataset.name;
+      const image = btn.dataset.image;
+      const price = btn.dataset.price;
+
+      // 먼저 added-to-cart.html 로드
+      fetch('../components/added-to-cart.html')
+        .then(response => {
+          if (!response.ok) throw new Error('Failed to load added-to-cart.html');
+          return response.text();
+        })
+        .then(popupHTML => {
+          const placeholder = document.getElementById('cart-popup-placeholder');
+          if (!placeholder) {
+            console.error('#cart-popup-placeholder not found in the DOM');
+            return;
+          }
+
+          // popup 삽입
+          placeholder.innerHTML = popupHTML;
+
+          requestAnimationFrame(() => {
+            const overlay = placeholder.querySelector('.popup-overlay');
+            const cartItemPlaceholder = overlay.querySelector('.cart-item-placeholder');
+            const closeBtn = overlay.querySelector('.popup-close-btn');
+
+            if (!cartItemPlaceholder) {
+              console.error('.cart-item-placeholder not found');
+              return;
+            }
+
+            // 이제 cart-item.html 로드
+            fetch('../components/cart-item.html')
+              .then(res => {
+                if (!res.ok) throw new Error('Failed to load cart-item.html');
+                return res.text();
+              })
+              .then(cartItemHTML => {
+                // 문자열 -> DOM 변환
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = cartItemHTML.trim();
+                const cartItemEl = tempDiv.firstElementChild;
+
+                // 데이터 채우기
+                cartItemEl.querySelector('.cart-item-img').src = image;
+                cartItemEl.querySelector('.cart-item-img').alt = name;
+                cartItemEl.querySelector('.cart-item-title').textContent = name;
+                cartItemEl.querySelector('.cart-item-description').textContent = 'Product Description'; // 필요 시 수정
+                cartItemEl.querySelector('.cart-item-price').textContent = price;
+
+                cartItemPlaceholder.innerHTML = ''; // 이전 내용 제거
+                cartItemPlaceholder.appendChild(cartItemEl);
+              })
+              .catch(err => console.error('Error loading cart-item.html:', err));
+
+            // 닫기 버튼 이벤트
+            closeBtn.addEventListener('click', () => {
+              overlay.remove();
+            });
+          });
+        })
+        .catch(error => console.error('Error loading added-to-cart.html:', error));
+    });
+  });
+}
   
