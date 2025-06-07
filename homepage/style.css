@@ -10,13 +10,13 @@
 }
 
 #search-icon {
-  background-image: url('/AmericanVintageClothing/assets/icons/search-white.png');
+  background-image: url('..//assets/icons/search-white.png');
 }
 #cart-icon {
-  background-image: url('/AmericanVintageClothing/assets/icons/cart-white.png');
+  background-image: url('../assets/icons/cart-white.png');
 }
 #user-icon {
-  background-image: url('/AmericanVintageClothing/assets/icons/user-white.png');
+  background-image: url('../assets/icons/user-white.png');
 }
 
 .dropdown-menu {
@@ -30,7 +30,7 @@
 #landing-page {
   position: relative;
   min-height: 100vh;
-  background: url('/AmericanVintageClothing/assets/images/background.jpg') center / cover no-repeat;
+  background: url('../assets/images/background.jpg') center / cover no-repeat;
 
   display: flex;
   flex-direction: column;
