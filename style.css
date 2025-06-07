@@ -79,6 +79,7 @@
   align-items: center;     
   padding: 8rem 4rem;
   gap: 2rem;
+  min-height: 100vh;
 }
 
 .home-section header {

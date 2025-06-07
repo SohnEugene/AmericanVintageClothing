@@ -2,9 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // === Load Header ===
   const headerPlaceholder = document.getElementById('header-placeholder');
   if (headerPlaceholder) {
-    fetch('../components/header.html')
+    const isMobile = window.innerWidth <= 768;
+    const headerPath = isMobile ? '../components/mobile-header.html' : '../components/header.html';
+
+    fetch(headerPath)
       .then(response => {
-        if (!response.ok) throw new Error('Failed to load header.html');
+        if (!response.ok) throw new Error('Failed to load header');
         return response.text();
       })
       .then(data => {
@@ -15,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(error => console.error('Error loading header:', error));
   }
+
 
   // === Load Footer ===
   const footerPlaceholder = document.getElementById('footer-placeholder');
