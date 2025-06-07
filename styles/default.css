@@ -231,7 +231,7 @@ a.btn-default {
 
 /* search bar */
 
-.popup-overlay{
+.popup-overlay, .vertical-popup-overlay{
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.4);
