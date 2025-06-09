@@ -99,7 +99,6 @@ export async function loadAddedToCart() {
 }
   
 function setupAddedToCartEvents() {
-    console.log(document);
     const buttons = document.querySelectorAll('.add-to-cart-btn');
     if (!buttons.length) {
       console.warn('[setupAddedToCartEvents] No .add-to-cart-btn found.');
