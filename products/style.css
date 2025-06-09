@@ -67,7 +67,7 @@
   
   
 #product-info-description-measurements {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
     margin-top: -1rem;
 	margin-left: 1rem;
@@ -86,5 +86,5 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin-top: 4rem;
+    margin: 4rem 0;
 }

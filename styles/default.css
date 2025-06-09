@@ -240,8 +240,8 @@ a.btn-default {
 
 
 /* search bar */
-
-.popup-overlay, .vertical-popup-overlay{
+/* Fade animation for overlay */
+.popup-overlay, .vertical-popup-overlay {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.4);
@@ -250,17 +250,47 @@ a.btn-default {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-}
   
-.popup-container {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .popup-overlay.active, .vertical-popup-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  
+  /* Slide animation for popup content */
+  .popup-container {
     width: 100%;
     background: #f3f3f3;
     padding: 3rem 1rem 0 3rem;
-
+  
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+  
+    transform: translateY(-30%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  
+  .popup-overlay.active .popup-container {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .vertical-popup-overlay .popup-container {
+    transform: translateX(-30%);
+  }
+  
+  .vertical-popup-overlay.active .popup-container {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
 
 .popup-title {
     font-size: 1.5rem;
@@ -276,10 +306,6 @@ a.btn-default {
     background: none;
     border: none;
     cursor: pointer;
-}
-
-#search-popup-overlay {
-    display: none;
 }
 
 #search-input-wrapper {
