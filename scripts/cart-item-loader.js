@@ -1,6 +1,3 @@
-const cartItemsContainer = document.getElementById('cart-items');
-
-// 배열로 제품 정보 관리
 const cartItems = [
   {
     image: '../assets/images/tops1.png',
@@ -16,23 +13,34 @@ const cartItems = [
   }
 ];
 
-// 각 아이템을 반복해서 로드
-cartItems.forEach(item => {
-  fetch('../components/cart-item.html')
-    .then(response => response.text())
-    .then(html => {
+
+
+export async function loadCartItem(containerId = 'cart-items') {
+  const cartItemsContainer = document.getElementById(containerId);
+  if (!cartItemsContainer) {
+    return;
+  }
+
+  const promises = cartItems.map(async (item) => {
+    try {
+      const response = await fetch('../components/cart-item.html');
+      if (!response.ok) throw new Error('Failed to load cart-item.html');
+      const html = await response.text();
+
       const tempDiv = document.createElement('div');
       tempDiv.innerHTML = html.trim();
-      const cartItem = tempDiv.firstChild;
+      const cartItem = tempDiv.firstElementChild;
 
-      // 이미지, 텍스트 삽입
       cartItem.querySelector('.cart-item-img').src = item.image;
       cartItem.querySelector('.cart-item-title').textContent = item.name;
       cartItem.querySelector('.cart-item-description').textContent = item.description;
       cartItem.querySelector('.cart-item-price').textContent = item.price;
 
-      // 추가
       cartItemsContainer.appendChild(cartItem);
-    });
-});
+    } catch (err) {
+      console.error('Error loading a cart item:', err);
+    }
+  });
 
+  await Promise.all(promises);
+}

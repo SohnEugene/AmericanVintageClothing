@@ -1,4 +1,4 @@
-export function loadHeader() {
+export async function loadHeader() {
   const headerPlaceholder = document.getElementById('header-placeholder');
   if (!headerPlaceholder) {
     console.error('[loadHeader] #header-placeholder not found in the DOM');
@@ -19,7 +19,7 @@ export function loadHeader() {
     .catch(err => console.error('[loadHeader] Error:', err));
 }
 
-export function loadFooter() {
+export async function loadFooter() {
   const footerPlaceholder = document.getElementById('footer-placeholder');
   if (!footerPlaceholder) {
     console.error('[loadFooter] #footer-placeholder not found in the DOM');

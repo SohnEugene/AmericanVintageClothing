@@ -55,8 +55,6 @@ function renderProducts() {
         gridContainer.appendChild(clone);
       });
     }
-  
-    setupCartPopupEvents();
 }
   
   
@@ -79,8 +77,6 @@ function renderProductsLine() {
         container.appendChild(wrapper);
       });
     });
-  
-    setupCartPopupEvents();
 }
   
 
@@ -121,81 +117,3 @@ function createProductCard(template, product) {
     return clone;
 }
   
-
-
-// for setting up the add to cart popup events 
-function setupCartPopupEvents() {
-    document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const name = btn.dataset.name;
-        const image = btn.dataset.image;
-        const price = btn.dataset.price;
-  
-        fetch('../components/added-to-cart.html')
-          .then(response => {
-            if (!response.ok) throw new Error('Failed to load added-to-cart.html');
-            return response.text();
-          })
-          .then(popupHTML => {
-            const placeholder = document.getElementById('cart-popup-placeholder');
-            if (!placeholder) {
-              console.error('#cart-popup-placeholder not found');
-              return;
-            }
-  
-            placeholder.innerHTML = popupHTML;
-  
-            requestAnimationFrame(() => {
-              const overlay = placeholder.querySelector('.popup-overlay');
-              const cartItemPlaceholder = overlay.querySelector('.cart-item-placeholder');
-              const closeBtn = overlay.querySelector('.popup-close-btn');
-  
-              if (!cartItemPlaceholder) {
-                console.error('.cart-item-placeholder not found');
-                return;
-              }
-  
-              requestAnimationFrame(() => {
-                overlay.classList.add('active');
-              });
-  
-              setTimeout(() => {
-                overlay.classList.remove('active');
-                setTimeout(() => {
-                  overlay.remove();
-                }, 400);
-              }, 3000);
-  
-              closeBtn.addEventListener('click', () => {
-                overlay.classList.remove('active');
-                setTimeout(() => {
-                  overlay.remove();
-                }, 400);
-              });
-  
-              fetch('../components/cart-item.html')
-                .then(res => {
-                  if (!res.ok) throw new Error('Failed to load cart-item.html');
-                  return res.text();
-                })
-                .then(cartItemHTML => {
-                  const tempDiv = document.createElement('div');
-                  tempDiv.innerHTML = cartItemHTML.trim();
-                  const cartItemEl = tempDiv.firstElementChild;
-  
-                  cartItemEl.querySelector('.cart-item-img').src = image;
-                  cartItemEl.querySelector('.cart-item-img').alt = name;
-                  cartItemEl.querySelector('.cart-item-title').textContent = name;
-                  cartItemEl.querySelector('.cart-item-description').textContent = 'Product Description';
-                  cartItemEl.querySelector('.cart-item-price').textContent = price;
-  
-                  cartItemPlaceholder.innerHTML = '';
-                  cartItemPlaceholder.appendChild(cartItemEl);
-                })
-                .catch(err => console.error('Error loading cart-item.html:', err));
-            });
-          })
-          .catch(error => console.error('Error loading added-to-cart.html:', error));
-      });
-    });
-}
