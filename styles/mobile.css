@@ -197,9 +197,6 @@
 
 
 
-
-
-
     .checkout-container {
         margin: 0;
         flex-direction: column-reverse;
@@ -256,4 +253,48 @@
         gap: 0.5rem;
         margin-bottom: 8rem;
     }
+
+
+
+    .product-slider {
+        overflow: hidden;
+        width: 100%;
+        max-width: 100vw;
+        margin: 0 auto;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .slider-wrapper {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        width: 300%;
+    }
+
+    #product-images img {
+        width: calc(100vw - 32px);
+        flex-shrink: 0;
+        object-fit: cover;
+        aspect-ratio: 4 / 5;
+        display: block;
+    }
+
+    .slider-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .slider-controls button {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .slider-index {
+        font-size: 1rem;
+    }   
 }

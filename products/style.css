@@ -11,13 +11,7 @@
     margin: 2rem 0;
 }
 
-#product-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    flex: 2;
-    min-width: 320px;
-}
+
   
 #product-images img {
     width: 100%;
@@ -48,7 +42,7 @@
 }
   
 #product-info-price {
-    flex-shrink: 0; /* 줄어들지 않게 고정 */
+    flex-shrink: 0; 
 }
 
 
@@ -89,9 +83,45 @@
     margin: 4rem 0;
 }
 
-.add-to-cart-btn {
+#main-add-to-cart-btn {
     width: 100%;
     height: 3rem;
     font-size: 20px;
     font-weight: bold;
 }
+
+
+
+#product-images.product-slider {
+    flex: 2;
+    min-width: 320px;
+}
+
+.slider-wrapper img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/5;
+}
+  
+  .slider-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .slider-controls {
+    display: none;
+  }
+
+  .slider-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.slider-controls {
+    display: none;
+}
+  
+  
+

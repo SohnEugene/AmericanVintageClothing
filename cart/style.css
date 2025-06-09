@@ -80,13 +80,13 @@ main {
     width: 32px;
     height: 32px;
 	font-size: 20px;
-    color: white;             /* 버튼 글씨는 흰색 */
+    color: white; 
     cursor: pointer;
 
-    display: flex;            /* 텍스트 중앙 정렬을 위해 */
+    display: flex; 
     align-items: center;
     justify-content: center;
     user-select: none;
 
-	visibility: visible;        /* 텍스트 선택 방지 */
+	visibility: visible;
 }

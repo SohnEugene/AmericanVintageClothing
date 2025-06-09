@@ -159,7 +159,7 @@ main {
   
 .footer-content {
     display: flex;
-    gap: 3rem; /* 칼럼 간 간격 */
+    gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -167,9 +167,9 @@ main {
 .footer-column {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* 왼쪽 정렬 */
+    align-items: flex-start;
     gap: 0.75rem;
-    flex: 1; /* 두 칼럼이 균등한 너비 차지 */
+    flex: 1;
 }
   
 .footer-column p {
@@ -202,6 +202,12 @@ button {
     border: none;
     cursor: pointer;
     text-align: center;
+
+    transition: background-color 0.3s ease;
+}
+
+.btn-default:hover {
+    background-color: #814530;
 }
 
 .add-to-cart-btn {
@@ -486,8 +492,6 @@ a.btn-default {
     margin: 0;
     scroll-behavior: smooth;
   
-    align-self: flex-start; /* 💡 중요: 부모의 center 정렬에서 빠져나오기 */
-    width: 100%; /* 필요 시 최대 너비 확보 */
+    align-self: flex-start; 
+    width: 100%;
   }
-  
-  
